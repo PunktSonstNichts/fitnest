@@ -1,0 +1,58 @@
+button, .btn, *[type='submit']{
+    border-radius: 1vmin;
+    padding: 2vh 4vw;
+    font-size: 3.5vmin;
+    line-height: 3.7vmin;
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgb(229,210,173);
+    background-color: rgba(241,212,175, 0.6);
+}
+button.flat, .btn.flat, *[type='submit'].flat{
+    background-color: rgb(241,212,175);
+}
+button.success, .btn.success, *[type='submit']{
+    border: 1px solid rgb(195,222,218);
+    background-color: rgba(197,224,220, 0.6);
+}
+button.success.flat, btn.success.flat, *[type='submit'].flat{
+    background-color: rgb(197,224,220);
+}
+button.danger, .btn.danger{
+    border: 1px solid rgb(222,140,119);
+    background-color: rgba(224,142,121, 0.6);
+}
+button.danger.flat, .btn.danger.flat{
+    background-color: rgb(224,142,121);
+}
+
+button:hover, .btn:hover{
+    background-color: rgba(236,207,170, 0.6);
+    box-shadow: inset 0px 2px 4px rgba(33, 33, 33, 0.6);
+}
+button.flat:hover, .btn.flat:hover{
+    background-color: rgb(236,207,170);
+}
+button.success:hover, .btn.success:hover, *[type='submit']:hover{
+    background-color: rgba(172, 214, 208, 0.6);
+}
+button.success.flat:hover, .btn.success.flat:hover, *[type='submit'].flat:hover{
+    background-color: rgb(172, 214, 208);
+}
+button.danger:hover, .btn.danger:hover{
+    background-color: rgb(220, 120, 94);
+}
+
+input[type='text'], input[type='password']{
+    border-radius: 1vmin;
+    padding: 4vmin 4vmax;
+    font-size: 1.7vmax;
+    line-height: 2vmax;
+    border: 1px solid rgb(188, 188, 188);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+}
+input[type='text']:focus, input[type='password']:focus{
+    border: 1p solid rgb(195,222,218);
+    box-shadow: 0px 0px 5px rgba(197,224,220, 0.8);
+}

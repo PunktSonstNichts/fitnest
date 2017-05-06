@@ -1,0 +1,494 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.seperator.high {
+    background: rgb(140, 140, 140);
+    width: 1px;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#nav{
+    height:240px;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 10%, rgba(0,0,0,0.1) 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 10%,rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%,rgba(0, 0, 0, 0.1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08212121', endColorstr='#cc000000',GradientType=0 )
+}
+#logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    color: rgb(29, 114, 108);
+}
+#logoframe {
+    font-size: 3.2em;
+    font-weight: bolder;
+    text-shadow: 2px 1px rgb(2, 59, 55);
+}
+
+#settings {
+    height: 42px;
+    width: 42px;
+    border-radius: 42px;
+    font-size: 42px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(240,240,240);
+}
+
+
+#quicklook {
+
+}
+#greeting{
+    text-align: center;
+    height: 60px;
+}
+#info, #progresswrapper{
+    padding: 5px;
+}
+#info {
+    display: flex;
+    justify-content: space-between;
+    width: 85vw;
+    margin: auto;
+}
+#info > * {
+    padding: 5px;
+}
+#date{
+    width:50%;
+}
+#progresswrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#progess {
+    width: 85vw;
+    height: 20px;
+    border: 1px solid rgb(127, 173, 44);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0px 2px 20px rgba(0,0,0,0.4);
+}
+#progressbar {
+    background: rgb(127, 173, 44);
+    height: 100%;
+    transition: width 0.2s;
+}
+
+#dayselector{
+    display: flex;
+    border-bottom: 1px solid rgb(140,140,140);
+}
+.taskday{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+}
+.taskdayhead{
+    display: inline-block;
+    text-align: center;
+    padding: 1px 3px;
+}
+.taskday.active > .taskdayhead{
+    background-color: rgb(186, 47, 47);
+    color: white;
+}
+.taskdaycontent{
+    text-align: center;
+    flex: 1;
+    padding: 1px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vmin;
+}
+
+
+
+#tasklist{
+    flex: 1;
+    overflow-y: scroll;
+}
+.task{
+    display: flex;
+}
+.task-icon-wrapper{
+    width: 10vh;
+    border-bottom: 1px solid rgb(120,120,120);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.task-icon {
+    height: 9vh;
+    width: 9vh;
+    border: 1px solid rgb(29, 114, 108);
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.4);
+}
+.task-title {
+    flex: 1;
+    border-bottom: 1px solid rgb(120,120,120);
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    transition: color 0.2s linear;
+}
+.task-done{
+    background: rgb(127, 173, 44);
+    border-left:1px solid rgb(97, 137, 24);
+    border-bottom:1px solid rgb(97, 137, 24);
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vmin;
+    color: white;
+}
+
+.task.done{
+    background: rgb(127, 173, 44);
+    animation: colorfadeinLeft 0.2s;
+}
+.task.done > .task-title{
+    color: white;
+}
+.task.done > .task-done{
+    border-left: 1px solid rgb(127, 173, 44);
+    color: rgb(127, 173, 44);
+}
+
+
+@keyframes colorfadeinLeft
+{
+    0%   {background: linear-gradient(90deg, rgba(127, 173, 44, 0.0) 100%, rgb(127, 173, 44) 0%);}
+    10%  {background: linear-gradient(90deg, rgba(127, 173, 44, 0.0) 90%, rgb(127, 173, 44) 10%);}
+    20%  {background: linear-gradient(90deg, rgba(127, 173, 44, 0.0) 80%, rgb(127, 173, 44) 20%);}
+    30%  {background: linear-gradient(90deg, rgba(127, 173, 44, 0.0) 70%, rgb(127, 173, 44) 30%);}
+    40%  {background: linear-gradient(90deg, rgba(127, 173, 44, 0.0) 60%, rgb(127, 173, 44) 40%);}
+    50%  {background: linear-gradient(90deg, rgb(127, 173, 44) 50%, rgba(127, 173, 44, 0.0) 50%);}
+    50%  {background: linear-gradient(270deg, rgb(127, 173, 44) 50%, rgba(127, 173, 44, 0.0) 50%);}
+    60%  {background: linear-gradient(270deg, rgb(127, 173, 44) 60%, rgba(127, 173, 44, 0.0) 40%);}
+    70%  {background: linear-gradient(270deg, rgb(127, 173, 44) 70%, rgba(127, 173, 44, 0.0) 30%);}
+    80%  {background: linear-gradient(270deg, rgb(127, 173, 44) 80%, rgba(127, 173, 44, 0.0) 20%);}
+    90%  {background: linear-gradient(270deg, rgb(127, 173, 44) 90%, rgba(127, 173, 44, 0.0) 10%);}
+    100% {background: linear-gradient(270deg, rgb(127, 173, 44) 100%, rgba(127, 173, 44, 0.0) 0%);}
+}
+
+#overview{
+    color: white;
+    background: rgb(29, 114, 108);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:10vh;
+    font-size:1.8em;
+}
+
+
+#stats_page{
+    color: white;
+    background: rgb(29, 114, 108);
+    height: 90vh;
+}
+
+#chart_wrapper{
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+}
+.chart{
+    height: 30vh;
+    margin: 10px;
+    min-width: 20px;
+    max-width: 45px;
+    display: flex;
+    align-items: flex-end;
+    background: rgb(16, 91, 86);
+    flex: 1;
+}
+.chartbox{
+    background: white;
+    width: 100%;
+    transition: height 0.2s linear 0.2s;
+}
+.chartbox.hide{
+    height: 0% !important;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

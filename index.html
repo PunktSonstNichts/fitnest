@@ -1,0 +1,162 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/framework.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="wrapper">
+        <div id="nav">
+            <div id="logo">
+                <div id="logoframe">fitnessapp</div>
+                <div id="settings">&#9881;</div>
+            </div>
+            <div id="quicklook">
+                <div id="greeting">
+                    <span style="font-size: 1.8em;">Hallo, <span id="username">Till</span></span>
+                    <div>Tagesziel:</div>
+                </div>
+                <div id="info">
+                    <div id="date">Mittwoch, 19.04.2017</div>
+                    <div id="opentask">2 tasks today</div>
+                </div>
+                <div id="progresswrapper">
+                    <div id="progess">
+                        <div id="progressbar" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="dayselector">
+            <div class="taskday" data-dayid="1">
+                <span class="taskdayhead">Mo</span>
+                <span class="taskdaycontent">17</span>
+            </div>
+            <div class="seperator high"></div>
+            <div class="taskday" data-dayid="2">
+                <span class="taskdayhead">Di</span>
+                <span class="taskdaycontent">18</span>
+            </div>
+            <div class="seperator high"></div>
+            <div class="taskday active" data-dayid="3">
+                <span class="taskdayhead">Mi</span>
+                <span class="taskdaycontent">19</span>
+            </div>
+            <div class="seperator high"></div>
+            <div class="taskday" data-dayid="4">
+                <span class="taskdayhead">Do</span>
+                <span class="taskdaycontent">20</span>
+            </div>
+            <div class="seperator high"></div>
+            <div class="taskday" data-dayid="5">
+                <span class="taskdayhead">Fri</span>
+                <span class="taskdaycontent">21</span>
+            </div>
+            <div class="seperator high"></div>
+            <div class="taskday" data-dayid="6">
+                <span class="taskdayhead">Sa</span>
+                <span class="taskdaycontent">22</span>
+            </div>
+            <div class="seperator high"></div>
+            <div class="taskday" data-dayid="7">
+                <span class="taskdayhead">So</span>
+                <span class="taskdaycontent">23</span>
+            </div>
+
+        </div>
+
+        <div id="tasklist">
+            <div class="task" data-day="1">
+                <div class="task-icon-wrapper">
+                    <div class="task-icon"></div>
+                </div>
+                <div class="task-title">Hanteltraining</div>
+                <div class="task-done">&#x2713;</div>
+            </div>
+            <div class="task" data-day="1">
+                <div class="task-icon-wrapper">
+                    <div class="task-icon"></div>
+                </div>
+                <div class="task-title">Yoga</div>
+                <div class="task-done">&#x2713;</div>
+            </div>
+            <div class="task" data-day="2">
+                <div class="task-icon-wrapper">
+                    <div class="task-icon"></div>
+                </div>
+                <div class="task-title">Schwimmen</div>
+                <div class="task-done">&#x2713;</div>
+            </div>
+            <div class="task" data-day="3">
+                <div class="task-icon-wrapper">
+                    <div class="task-icon"></div>
+                </div>
+                <div class="task-title">Yoga</div>
+                <div class="task-done">&#x2713;</div>
+            </div>
+            <div class="task" data-day="3">
+                <div class="task-icon-wrapper">
+                    <div class="task-icon"></div>
+                </div>
+                <div class="task-title">Joggen gehen</div>
+                <div class="task-done">&#x2713;</div>
+            </div>
+            <div class="task" data-day="4">
+                <div class="task-icon-wrapper">
+                    <div class="task-icon"></div>
+                </div>
+                <div class="task-title">Dehnübungen</div>
+                <div class="task-done">&#x2713;</div>
+            </div>
+        </div>
+
+        <div id="overview" href="#stats_page">
+            <span>Auswertung</span>
+        </div>
+        </div>
+
+        <div id="stats_page">
+            <div id="chart_wrapper">
+                <div class="chart"><div class="chartbox" style="height: 40%;"></div></div>
+                <div class="chart"><div class="chartbox" style="height: 60%;"></div></div>
+                <div class="chart"><div class="chartbox" style="height: 37%;"></div></div>
+                <div class="chart"><div class="chartbox" style="height: 44%;"></div></div>
+                <div class="chart"><div class="chartbox" style="height: 63%;"></div></div>
+                <div class="chart"><div class="chartbox" style="height: 17%;"></div></div>
+                <div class="chart"><div class="chartbox" style="height: 75%;"></div></div>
+            </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+                e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+                e.src='https://www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
