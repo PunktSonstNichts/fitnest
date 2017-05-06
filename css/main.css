@@ -117,6 +117,8 @@ textarea {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    width: 85vw;
+    margin: auto;
     color: rgb(29, 114, 108);
 }
 #logoframe {
@@ -252,6 +254,15 @@ textarea {
     font-size: 10vmin;
     color: white;
 }
+.task-helper{
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vmin;
+    border-bottom: 1px solid rgb(120,120,120);
+}
 
 .task.done{
     background: rgb(127, 173, 44);
@@ -264,6 +275,22 @@ textarea {
     border-left: 1px solid rgb(127, 173, 44);
     color: rgb(127, 173, 44);
 }
+.task.finished > .task-helper{
+    color: rgb(127, 173, 44);
+}
+
+.task.addnew {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(186, 47, 47);
+    font-size: 8vh;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 1px rgb(148, 26, 26);
+}
+
 
 
 @keyframes colorfadeinLeft

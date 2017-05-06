@@ -44,4 +44,6 @@ $(document).ready(function () {
             $(".chartbox").addClass("hide");
         }
     });
+
+    $(".taskday.active")[0].click();
 });
