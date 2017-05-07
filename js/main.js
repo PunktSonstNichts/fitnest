@@ -46,4 +46,9 @@ $(document).ready(function () {
     });
 
     $(".taskday.active")[0].click();
+
+
+    $(".task.addnew").click(function () {
+       $()
+    });
 });
