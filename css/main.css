@@ -358,8 +358,8 @@ textarea {
     justify-content: space-around;
 }
 .goal{
-    width: 30vw;
-    min-width: 200px;
+    width: 35vw;
+    min-width: 175px;
     height: 10vh;
     padding: 12px;
     box-sizing: border-box;
