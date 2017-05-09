@@ -83,7 +83,7 @@ $(document).ready(function () {
     $("#opentask").html($(".taskday.active").attr("data-taskcount") + " Übungen heute");
 
 
-    $(".task.addnew").click(function () {
-       $("#add_new").toggleClass("hide");
+    $(".task.addnew, #add_new").click(function () {
+       $("#add_new, #stats_page").toggleClass("hide");
     });
 });

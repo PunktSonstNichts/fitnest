@@ -94,9 +94,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-body{
-    overflow: hidden;
-}
 .seperator.high {
     background: rgb(140, 140, 140);
     width: 1px;
@@ -329,6 +326,10 @@ body{
     background: rgb(29, 114, 108);
     height: 90vh;
 }
+#stats_page.hide{
+    height: 0px;
+    overflow: hidden;
+}
 
 #chart_wrapper{
     width: 100vw;
@@ -381,19 +382,22 @@ body{
 
 
 #add_new{
-    position: absolute;
+    display: block;
+    position: fixed;
     height: 100vh;
     width: 100vw;
     background: rgb(186, 47, 47);
+    color: #ffffff;
     -webkit-transition: margin 0.2s;
     -moz-transition: margin 0.2s;
     -ms-transition: margin 0.2s;
     -o-transition: margin 0.2s;
     transition: margin 0.2s;
+    overflow: hidden;
 }
 #add_new.hide{
     margin-left: 100vw;
-    display: none;
+    width: 0px;
 }
 /* ==========================================================================
    Helper classes
