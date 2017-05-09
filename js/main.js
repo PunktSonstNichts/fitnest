@@ -84,6 +84,6 @@ $(document).ready(function () {
 
 
     $(".task.addnew").click(function () {
-       $()
+       $("#add_new").toggleClass("hide");
     });
 });
