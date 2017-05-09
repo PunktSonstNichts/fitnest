@@ -9,7 +9,9 @@ $(document).ready(function () {
       $(this).attr("data-taskcount", $("*[data-day='" + $(this).attr("data-dayid") + "']").size());
    });
 
-   $(".task-done").click(function () {
+   $(document).on("click", ".task-done", function () {
+       console.log("cliick");
+
         $(this).parent(".task").toggleClass("done");
 
         var f = $("#progressbar").width() / $("#progressbar").parent().width() * 100;
@@ -45,7 +47,40 @@ $(document).ready(function () {
         }
     });
 
+
+    var d = new Date();
+    var n = d.getDay();
+    n = (n - 1) % 7; //so it starts on monday
+    console.log(n);
+    $(".taskday").eq(n).addClass("active");
+
+
+    dates = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"];
+
+    $("#date").text(dates[n] + ", " + d.getDate() + "." + (d.getMonth() + 1) + "." + d.getFullYear());
+
+    var day = d.getDay(),
+        diff = d.getDate() - day + (day == 0 ? -6:1); // adjust when day is sunday
+    var firstofweek = new Date(d.setDate(diff));
+
+    $(".taskday").each(function () {
+        $(this).children(".taskdaycontent").text(firstofweek.getDate());
+        firstofweek.setDate(firstofweek.getDate() + 1);
+    })
+
+    $(".task[data-day]").each(function () {
+        i = parseInt($(this).attr("data-day"), 10) - 1;
+        console.log(i + " - " + n);
+        if((i) < n){
+            $(this).addClass("finished");
+        }else if((i) == n){
+            $(this).children(".task-helper").addClass("task-done").removeClass("task-helper");
+        }
+    })
+
     $(".taskday.active")[0].click();
+
+    $("#opentask").html($(".taskday.active").attr("data-taskcount") + " Übungen heute");
 
 
     $(".task.addnew").click(function () {
