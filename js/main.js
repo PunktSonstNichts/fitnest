@@ -55,7 +55,7 @@ $(document).ready(function () {
     $(".taskday").eq(n).addClass("active");
 
 
-    dates = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"];
+    dates = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
 
     $("#date").text(dates[n] + ", " + d.getDate() + "." + (d.getMonth() + 1) + "." + d.getFullYear());
 
