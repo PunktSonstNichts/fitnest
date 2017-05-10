@@ -153,7 +153,7 @@ textarea {
 #info {
     display: flex;
     justify-content: space-between;
-    width: 85vw;
+    width: 71.42vw;
     margin: auto;
 }
 #info > * {
@@ -168,7 +168,7 @@ textarea {
     align-items: center;
 }
 #progess {
-    width: 85vw;
+    width: 71.42vw;
     height: 20px;
     border: 1px solid rgb(127, 173, 44);
     border-radius: 1px;
@@ -220,15 +220,16 @@ textarea {
     display: flex;
 }
 .task-icon-wrapper{
-    width: 10vh;
+    width: 14.28vw;
+    height: 14.28vw;
     border-bottom: 1px solid rgb(120,120,120);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .task-icon {
-    height: 7vh;
-    width: 7vh;
+    height: 12vw;
+    width: 12vw;
     border: 1px solid rgb(29, 114, 108);
     border-radius: 2px;
     background: white;
@@ -246,8 +247,8 @@ textarea {
     background: rgb(127, 173, 44);
     border-left:1px solid rgb(97, 137, 24);
     border-bottom:1px solid rgb(97, 137, 24);
-    width: 10vh;
-    height: 10vh;
+    width: 14.28vw;
+    height: 14.28vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,8 +256,8 @@ textarea {
     color: white;
 }
 .task-helper{
-    width: 10vh;
-    height: 10vh;
+    width: 14.28vw;
+    height: 14.28vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,7 +290,7 @@ textarea {
     font-weight: 900;
     color: white;
     text-shadow: 2px 1px rgb(148, 26, 26);
-    width: 100vw;
+    width: 100%;
 }
 
 
