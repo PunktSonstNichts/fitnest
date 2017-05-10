@@ -400,6 +400,14 @@ textarea {
     margin-left: 100vw;
     width: 0px;
 }
+
+#add_new_back{
+    font-size: 8vh;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 1px rgb(148, 26, 26);
+    padding: 5px;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */

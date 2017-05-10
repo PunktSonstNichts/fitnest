@@ -80,7 +80,7 @@ $(document).ready(function () {
 
     $(".taskday.active")[0].click();
 
-    $("#opentask").html($(".taskday.active").attr("data-taskcount") + " Übungen heute");
+    $("#opentask").html($(".taskday.active").attr("data-taskcount") + " Übungen");
 
 
     $(".task.addnew, #add_new").click(function () {
