@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logo</title>
+</head>
+<body>
+<style type="text/css">
+#logo{
+    width: 90vmin;
+    height: 90vmin;
+    margin: 5vmin;
+    -webkit-border-radius:5vmin;
+    -moz-border-radius:5vmin;
+    border-radius:5vmin;
+    border: 3vmin solid black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+    #lanebox {
+        margin-left: 14.28vw;
+        width: 14.28vw;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        height: 100%;
+    }
+    #lane_stop{
+        width: 14.28vw;
+        height: 14.28vw;
+        background: white;
+        border: 1vmin solid black;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        position: absolute;
+        top: 42.86%;
+        box-sizing: border-box;
+    }
+    #lane_red{
+        height: 50%;
+        margin: 0 2vmin;
+        border-top:none;
+
+        background: rgb(186, 47, 47);
+        border: 1px solid rgb(148, 26, 26);
+    }
+    #lane_blue{
+        height: 50%;
+        margin: 0 2vmin;
+        border-bottom: none;
+
+        background: rgb(29, 114, 108);
+        border: 1px solid rgb(16, 91, 85);
+
+    }
+    #checkmark{
+        color: rgb(127, 173, 44);
+        text-shadow: 1px 1px rgb(97, 137, 24);
+        font-size: 60vmin;
+    }
+</style>
+<div id="logo">
+    <div id="lanebox">
+        <div id="lane_red"></div>
+        <div id="lane_stop"></div>
+        <div id="lane_blue"></div>
+    </div>
+    <div id="checkmark">&#x2713;</div>
+</div>
+</body>
+</html>

@@ -20,7 +20,21 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div id="add_new" class="hide">
-            <div id="add_new_back">&#8617; Zurück</div>
+            <div id="add_new_back">&#8617;</div>
+            <div id="add_new_form">
+                <div class="vw-fieldset__field">
+                    <div class="input_wrapper">
+                        <div class="input_field">
+                            <input class="input_input" type="text" id="title" name="title" value="">
+                            <label class="input_label" for="title">Title</label>
+                            <span class="input_focusline"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="add_new_form_submit">
+                Übung anlegen
+            </div>
         </div>
         <div id="wrapper">
         <div id="nav">
@@ -89,70 +103,143 @@
                 <div class="task-icon-wrapper">
                     <div class="task-icon"></div>
                 </div>
-                <div class="task-title">Hanteltraining</div>
+                <div class="task-text">
+                    <div class="task-title">Hanteltraining</div>
+                    <div class="task-info">
+                        <div class="task-time">18:00-18:30</div>
+                        <div class="task-friends"></div>
+                    </div>
+                </div>
                 <div class="task-helper">&#x2713;</div>
             </div>
             <div class="task" data-day="1">
                 <div class="task-icon-wrapper">
                     <div class="task-icon"></div>
                 </div>
-                <div class="task-title">Yoga</div>
+                <div class="task-text">
+                    <div class="task-title">Yoga</div>
+                    <div class="task-info">
+                        <div class="task-time">20:00-21:00</div>
+                        <div class="task-friends"></div>
+                    </div>
+                </div>
                 <div class="task-helper">&#x2713;</div>
             </div>
             <div class="task" data-day="2">
                 <div class="task-icon-wrapper">
                     <div class="task-icon"></div>
                 </div>
-                <div class="task-title">Schwimmen</div>
+                <div class="task-text">
+                    <div class="task-title">Schwimmen</div>
+                    <div class="task-info">
+                        <div class="task-time">17:00-19:30</div>
+                        <div class="task-friends">+4</div>
+                    </div>
+                </div>
                 <div class="task-helper">&#x2713;</div>
             </div>
             <div class="task" data-day="3">
                 <div class="task-icon-wrapper">
                     <div class="task-icon"></div>
                 </div>
-                <div class="task-title">Yoga</div>
+                <div class="task-text">
+                    <div class="task-title">Joggen gehen</div>
+                    <div class="task-info">
+                        <div class="task-time">18:00-19:30</div>
+                        <div class="task-friends">+2</div>
+                    </div>
+                </div>
                 <div class="task-helper">&#x2713;</div>
             </div>
             <div class="task" data-day="3">
                 <div class="task-icon-wrapper">
                     <div class="task-icon"></div>
                 </div>
-                <div class="task-title">Joggen gehen</div>
+                <div class="task-text">
+                    <div class="task-title">Yoga</div>
+                    <div class="task-info">
+                        <div class="task-time">20:00-21:00</div>
+                        <div class="task-friends"></div>
+                    </div>
+                </div>
                 <div class="task-helper">&#x2713;</div>
             </div>
             <div class="task" data-day="4">
                 <div class="task-icon-wrapper">
                     <div class="task-icon"></div>
                 </div>
-                <div class="task-title">Dehnübungen</div>
+                <div class="task-text">
+                    <div class="task-title">Dehnübungen</div>
+                    <div class="task-info">
+                        <div class="task-time">18:00-18:30</div>
+                        <div class="task-friends">+2</div>
+                    </div>
+                </div>
                 <div class="task-helper">&#x2713;</div>
             </div>
             <div class="task" data-day="5">
                 <div class="task-icon-wrapper">
                     <div class="task-icon"></div>
                 </div>
-                <div class="task-title">Dehnübungen</div>
+                <div class="task-text">
+                    <div class="task-title">Dehnübungen</div>
+                    <div class="task-info">
+                        <div class="task-time">18:00-18:30</div>
+                        <div class="task-friends">+1</div>
+                    </div>
+                </div>
                 <div class="task-helper">&#x2713;</div>
             </div>
             <div class="task" data-day="5">
                 <div class="task-icon-wrapper">
                     <div class="task-icon"></div>
                 </div>
-                <div class="task-title">Yoga</div>
+                <div class="task-text">
+                    <div class="task-title">Yoga</div>
+                    <div class="task-info">
+                        <div class="task-time">18:00-18:30</div>
+                        <div class="task-friends"></div>
+                    </div>
+                </div>
                 <div class="task-helper">&#x2713;</div>
             </div>
             <div class="task" data-day="5">
                 <div class="task-icon-wrapper">
                     <div class="task-icon"></div>
                 </div>
-                <div class="task-title">Tennis</div>
+                <div class="task-text">
+                    <div class="task-title">Tennis</div>
+                    <div class="task-info">
+                        <div class="task-time">18:00-18:30</div>
+                        <div class="task-friends">+3</div>
+                    </div>
+                </div>
                 <div class="task-helper">&#x2713;</div>
             </div>
             <div class="task" data-day="6">
                 <div class="task-icon-wrapper">
                     <div class="task-icon"></div>
                 </div>
-                <div class="task-title">Joggen gehen</div>
+                <div class="task-text">
+                    <div class="task-title">Joggen gehen</div>
+                    <div class="task-info">
+                        <div class="task-time">14:00-16:30</div>
+                        <div class="task-friends">+2</div>
+                    </div>
+                </div>
+                <div class="task-helper">&#x2713;</div>
+            </div>
+            <div class="task" data-day="7">
+                <div class="task-icon-wrapper">
+                    <div class="task-icon"></div>
+                </div>
+                <div class="task-text">
+                    <div class="task-title">Joggen gehen</div>
+                    <div class="task-info">
+                        <div class="task-time">14:00-16:30</div>
+                        <div class="task-friends">+1</div>
+                    </div>
+                </div>
                 <div class="task-helper">&#x2713;</div>
             </div>
             <div class="task addnew">
@@ -176,14 +263,17 @@
             <div id="stats_user">
 
             </div>
-            <div id="stats_goals">
-                <div class="goal">
-                    <div class="goal_chart"><div class="goal_chartbox red" style="width: 33%"></div> </div>
-                    <span class="goal_title">5x Joggen gehen</span>
+            <div id="ranking">
+                <div class="rank">
+                    <div class="rank_no">1.</div>
+                    <div class="rank_body">
+                        <img src="https://scontent.cdninstagram.com/t51.2885-15/s1080x1080/e15/fr/18013963_1837900793197743_101307523914530816_n.jpg" class="rank_avatar">
+                        <span style="margin-left: 10px;">Tilloh</span>
+                    </div>
                 </div>
-                <div class="goal">
-                    <div class="goal_chart"><div class="goal_chartbox red" style="width: 50%"></div> </div>
-                    <span class="goal_title">2x Yoga machen</span>
+                <div class="rank">
+                    <div class="rank_no">2.</div>
+                    <div class="rank_body"></div>
                 </div>
             </div>
         </div>

@@ -235,13 +235,22 @@ textarea {
     background: white;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.4);
 }
-.task-title {
+.task-text {
     flex: 1;
     border-bottom: 1px solid rgb(120,120,120);
-    display: flex;
-    align-items: center;
-    font-size: 1.2em;
     transition: color 0.2s linear;
+    padding: 1.14vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.task-title{
+    font-size: 1.1em;
+}
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
 }
 .task-done{
     background: rgb(127, 173, 44);
@@ -269,7 +278,7 @@ textarea {
     background: rgb(127, 173, 44);
     animation: colorfadeinLeft 0.2s;
 }
-.task.done > .task-title{
+.task.done > .task-text{
     color: white;
 }
 .task.done > .task-done{
@@ -291,9 +300,15 @@ textarea {
     color: white;
     text-shadow: 2px 1px rgb(148, 26, 26);
     width: 100%;
+    transition: all 0.2s;
 }
-
-
+.task.addnew:hover{
+    font-size: 10vh;
+}
+.task.addnew:focus, .task.addnew:active{
+    font-size: 10vh;
+    text-shadow: 3px 4px rgb(148, 26, 26);
+}
 
 @keyframes colorfadeinLeft
 {
@@ -318,9 +333,17 @@ textarea {
     justify-content: center;
     align-items: center;
     height:10vh;
-    font-size:1.8em;
+    font-size: 6vh;
+    text-shadow: 1px 2px rgb(16, 91, 86);
+    transition: all 0.2s;
 }
-
+#overview:hover{
+    font-size: 8vh;
+}
+#overview:focus, #overview:active{
+    font-size: 8vh;
+    text-shadow: 3px 4px rgb(16, 91, 86);
+}
 
 #stats_page{
     color: white;
@@ -333,7 +356,8 @@ textarea {
 }
 
 #chart_wrapper{
-    width: 100vw;
+    width: 71.42vw;
+    margin: auto;
     height: 40vh;
     display: flex;
     justify-content: space-around;
@@ -359,31 +383,43 @@ textarea {
     height: 0% !important;
 }
 
-#stats_goals {
+#ranking {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
+    margin: auto;
 }
-.goal{
-    width: 35vw;
-    min-width: 175px;
+.rank {
+    display: flex;
+    margin: 10px 0;
+}
+.rank_no{
+    width: 14.28vw;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 10vw;
+    font-weight: bold;
+    text-shadow: 1px 2px rgb(16, 91, 86);
+}
+.rank_body{
     height: 10vh;
-    padding: 12px;
+    padding: 8px;
     box-sizing: border-box;
     border-radius: 2px;
     background: white;
     color: black;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.4);
+    width: 71.42vw;
 }
-.goal_chart{
-    background: rgb(29, 114, 108);
-    height: 13px;
-    margin-bottom: 5px;
+.rank_avatar {
+    width: 14vw;
+    height: 14vw;
+    border-radius: 100%;
 }
-
-
 
 #add_new{
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -407,6 +443,29 @@ textarea {
     color: white;
     text-shadow: 2px 1px rgb(148, 26, 26);
     padding: 5px;
+    width: 14.28vw;
+    height: 14.28vw;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#add_new_form{
+    flex: 1;
+    width: 71.42vw;
+    margin: auto;
+}
+#add_new_form_submit{
+    height: 10vh;
+    font-size: 6.5vh;
+    font-weight: 900;
+    background: white;
+    color: rgb(186, 47, 47);
+    text-shadow: 2px 1px rgb(148, 26, 26);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* ==========================================================================
    Helper classes

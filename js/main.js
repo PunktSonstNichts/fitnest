@@ -25,6 +25,19 @@ $(document).ready(function () {
         }
    });
 
+   $(document).on("focus", "input", function () {
+       $(this).parent().addClass("focused");
+   }).on("blur", "input", function () {
+       if($(this).val().length == 0){
+           $(this).parent().removeClass("focused");
+       }
+   }).on("keydown", "input", function () {
+       console.log("key pressed on input");
+       if($(this).val().length != 0){
+           $(this).parent().addClass("focused");
+       }
+   });
+
     $('*[href^="#"]').on('click', function(event) {
         var target = $(this.getAttribute('href'));
         if( target.length ) {
@@ -83,7 +96,7 @@ $(document).ready(function () {
     $("#opentask").html($(".taskday.active").attr("data-taskcount") + " Übungen");
 
 
-    $(".task.addnew, #add_new").click(function () {
+    $(".task.addnew, #add_new_back").click(function () {
        $("#add_new, #stats_page").toggleClass("hide");
     });
 });
