@@ -467,6 +467,15 @@ textarea {
     justify-content: center;
     align-items: center;
 }
+
+.input_line{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+#add_friends{
+
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */

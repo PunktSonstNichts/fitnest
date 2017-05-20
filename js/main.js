@@ -25,13 +25,14 @@ $(document).ready(function () {
         }
    });
 
-   $(document).on("focus", "input", function () {
-       $(this).parent().addClass("focused");
-   }).on("blur", "input", function () {
+   $(document).on("focus", ".input_input", function () {
+       $(this).parent().addClass("focused").addClass("underline");
+   }).on("blur", ".input_input", function () {
+       $(this).parent().removeClass("underline");
        if($(this).val().length == 0){
            $(this).parent().removeClass("focused");
        }
-   }).on("keydown", "input", function () {
+   }).on("keydown", ".input_input", function () {
        console.log("key pressed on input");
        if($(this).val().length != 0){
            $(this).parent().addClass("focused");
