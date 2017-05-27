@@ -13,7 +13,6 @@ $(document).ready(function () {
        console.log("cliick");
 
         $(this).parent(".task").toggleClass("done");
-
         var f = $("#progressbar").width() / $("#progressbar").parent().width() * 100;
 
         var total = $(".taskday.active").attr("data-taskcount");
@@ -100,4 +99,9 @@ $(document).ready(function () {
     $(".task.addnew, #add_new_back").click(function () {
        $("#add_new, #stats_page").toggleClass("hide");
     });
+
+    $(document).on("click", ".labelselector", function () {
+        $(".labelselector").removeClass("active");
+        $(this).addClass("active");
+    })
 });

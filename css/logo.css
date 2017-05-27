@@ -1,0 +1,54 @@
+#logo{
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 3px solid black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+#lanebox {
+    margin-left: 5.712px;
+    width: 15px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+}
+#lane_stop{
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 2px solid black;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    position: absolute;
+    top: 21px;
+    box-sizing: border-box;
+}
+#lane_red{
+    height: 50%;
+    margin: 0 3px;
+    border-top: none;
+    background: rgb(186, 47, 47);
+    border: 1px solid rgb(148, 26, 26);
+    width: 6px;
+}
+#lane_blue{
+    height: 50%;
+    margin: 0 3px;
+    border-bottom: none;
+
+    background: rgb(29, 114, 108);
+    border: 1px solid rgb(16, 91, 85);
+    width: 6px;
+
+}
+#checkmark{
+    color: rgb(127, 173, 44);
+    text-shadow: 1px 1px rgb(97, 137, 24);
+    font-size: 45px;
+}

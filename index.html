@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/logo.css">
         <link rel="stylesheet" href="css/framework.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -60,16 +61,43 @@
                 <div class="input_line">
                     <button id="add_friends">+ Freunde hinzufügen</button>
                 </div>
+                <div class="input_line">
+                    <button style="margin-right: 5px;" id="rythm">Rythmus</button>
+                    <button style="margin-left: 5px;" id="reminder">Erinnerung</button>
+                </div>
+                <div class="input_line">
+                    <div>
+                        <span>W&auml;hle eine Kategorie</span>
+                        <div id="choose_label">
+                            <div class="label_wrapper"> <div class="labelselector label one"></div></div>
+                            <div class="label_wrapper"> <div class="labelselector label two"></div></div>
+                            <div class="label_wrapper"> <div class="labelselector label three"></div></div>
+                            <div class="label_wrapper"> <div class="labelselector label four"></div></div>
+                            <div class="label_wrapper"> <div class="labelselector label five">+</div></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="add_new_form_submit">
-                Übung anlegen
+                <span class="text">Übung anlegen</span>
+                <span class="wait">...</span>
             </div>
         </div>
         <div id="wrapper">
         <div id="nav">
-            <div id="logo">
+            <div id="logowrapper">
+                <div id="logo">
+                    <div id="lanebox">
+                        <div id="lane_red"></div>
+                        <div id="lane_stop"></div>
+                        <div id="lane_blue"></div>
+                    </div>
+                    <div id="checkmark">&#x2713;</div>
+                </div>
                 <div id="logoframe">fitnest</div>
+                <!--
                 <div id="settings">&#9881;</div>
+                -->
             </div>
             <div id="quicklook">
                 <div id="greeting">
@@ -130,7 +158,7 @@
         <div id="tasklist">
             <div class="task" data-day="1">
                 <div class="task-icon-wrapper">
-                    <div class="task-icon"></div>
+                    <div class="task-icon five"></div>
                 </div>
                 <div class="task-text">
                     <div class="task-title">Hanteltraining</div>
@@ -143,7 +171,7 @@
             </div>
             <div class="task" data-day="1">
                 <div class="task-icon-wrapper">
-                    <div class="task-icon"></div>
+                    <div class="task-icon one"></div>
                 </div>
                 <div class="task-text">
                     <div class="task-title">Yoga</div>
@@ -156,7 +184,7 @@
             </div>
             <div class="task" data-day="2">
                 <div class="task-icon-wrapper">
-                    <div class="task-icon"></div>
+                    <div class="task-icon four"></div>
                 </div>
                 <div class="task-text">
                     <div class="task-title">Schwimmen</div>
@@ -169,7 +197,7 @@
             </div>
             <div class="task" data-day="3">
                 <div class="task-icon-wrapper">
-                    <div class="task-icon"></div>
+                    <div class="task-icon two"></div>
                 </div>
                 <div class="task-text">
                     <div class="task-title">Joggen gehen</div>
@@ -182,7 +210,7 @@
             </div>
             <div class="task" data-day="3">
                 <div class="task-icon-wrapper">
-                    <div class="task-icon"></div>
+                    <div class="task-icon one"></div>
                 </div>
                 <div class="task-text">
                     <div class="task-title">Yoga</div>
@@ -195,7 +223,7 @@
             </div>
             <div class="task" data-day="4">
                 <div class="task-icon-wrapper">
-                    <div class="task-icon"></div>
+                    <div class="task-icon three"></div>
                 </div>
                 <div class="task-text">
                     <div class="task-title">Dehnübungen</div>
@@ -208,7 +236,7 @@
             </div>
             <div class="task" data-day="5">
                 <div class="task-icon-wrapper">
-                    <div class="task-icon"></div>
+                    <div class="task-icon three"></div>
                 </div>
                 <div class="task-text">
                     <div class="task-title">Dehnübungen</div>
@@ -221,7 +249,7 @@
             </div>
             <div class="task" data-day="5">
                 <div class="task-icon-wrapper">
-                    <div class="task-icon"></div>
+                    <div class="task-icon  one"></div>
                 </div>
                 <div class="task-text">
                     <div class="task-title">Yoga</div>
@@ -234,7 +262,7 @@
             </div>
             <div class="task" data-day="5">
                 <div class="task-icon-wrapper">
-                    <div class="task-icon"></div>
+                    <div class="task-icon five"></div>
                 </div>
                 <div class="task-text">
                     <div class="task-title">Tennis</div>
@@ -247,7 +275,7 @@
             </div>
             <div class="task" data-day="6">
                 <div class="task-icon-wrapper">
-                    <div class="task-icon"></div>
+                    <div class="task-icon  two"></div>
                 </div>
                 <div class="task-text">
                     <div class="task-title">Joggen gehen</div>
@@ -260,7 +288,7 @@
             </div>
             <div class="task" data-day="7">
                 <div class="task-icon-wrapper">
-                    <div class="task-icon"></div>
+                    <div class="task-icon two"></div>
                 </div>
                 <div class="task-text">
                     <div class="task-title">Joggen gehen</div>
@@ -289,6 +317,13 @@
                 <div class="chart"><div class="chartbox" style="height: 17%;"></div></div>
                 <div class="chart"><div class="chartbox" style="height: 75%;"></div></div>
             </div>
+            <div id="chart_labels">
+                <div class="label one"></div>
+                <div class="label two"></div>
+                <div class="label three"></div>
+                <div class="label four"></div>
+                <div class="label five"></div>
+            </div>
             <div id="stats_user">
 
             </div>
@@ -296,13 +331,24 @@
                 <div class="rank">
                     <div class="rank_no">1.</div>
                     <div class="rank_body">
-                        <img src="https://scontent.cdninstagram.com/t51.2885-15/s1080x1080/e15/fr/18013963_1837900793197743_101307523914530816_n.jpg" class="rank_avatar">
-                        <span style="margin-left: 10px;">Tilloh</span>
+                        <img src="https://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/18013934_434618500225390_7526245181905960960_n.jpg" class="rank_avatar">
+                        <div class="rank_text">
+                            <div class="rank_name">Till</div>
+                            <div class="rank_stats"><span>4</span> von <span>10</span> erledigt</div>
+                        </div>
                     </div>
+                    <div class="rank_margin"></div>
                 </div>
                 <div class="rank">
                     <div class="rank_no">2.</div>
-                    <div class="rank_body"></div>
+                    <div class="rank_body">
+                        <img src="https://scontent.cdninstagram.com/t51.2885-15/s1080x1080/e15/fr/18013963_1837900793197743_101307523914530816_n.jpg" class="rank_avatar">
+                        <div class="rank_text">
+                            <div class="rank_name">Max Mustermann</div>
+                            <div class="rank_stats"><span>3</span> von <span>6</span></div>
+                        </div>
+                    </div>
+                    <div class="rank_margin"></div>
                 </div>
             </div>
         </div>

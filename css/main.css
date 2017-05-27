@@ -112,12 +112,12 @@ textarea {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%,rgba(0, 0, 0, 0.1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08212121', endColorstr='#cc000000',GradientType=0 )
 }
-#logo {
+#logowrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    width: 85vw;
+    width: 95vw;
     margin: auto;
     color: rgb(29, 114, 108);
 }
@@ -125,6 +125,7 @@ textarea {
     font-size: 3.2em;
     font-weight: bolder;
     text-shadow: 2px 1px rgb(2, 59, 55);
+    margin-right: 2px;
 }
 
 #settings {
@@ -178,7 +179,7 @@ textarea {
 #progressbar {
     background: rgb(127, 173, 44);
     height: 100%;
-    transition: width 0.2s;
+    transition: width 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
 }
 
 #dayselector{
@@ -228,17 +229,36 @@ textarea {
     align-items: center;
 }
 .task-icon {
-    height: 12vw;
-    width: 12vw;
-    border: 1px solid rgb(29, 114, 108);
-    border-radius: 2px;
-    background: white;
+    height: 10vw;
+    width: 10vw;
+    border-radius: 100%;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.4);
 }
+.one{
+    border: 1px solid rgb(150, 28, 22);
+    background: rgb(186, 54, 47);
+}
+.two{
+    border: 1px solid rgb(123, 18, 73);
+    background: rgb(152, 39, 99);
+}
+.three{
+    border: 1px solid rgb(17, 117, 29);
+    background: rgb(37, 144, 50);
+}
+.four{
+    border: 1px solid rgb(33, 33, 33);
+    background: rgb(55, 55, 55);
+}
+.five{
+    border: 1px solid rgb(240, 240, 240);
+    background: rgb(255, 255, 255);
+}
+
 .task-text {
     flex: 1;
     border-bottom: 1px solid rgb(120,120,120);
-    transition: color 0.2s linear;
+    transition: color 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
     padding: 1.14vw;
     display: flex;
     flex-direction: column;
@@ -300,7 +320,7 @@ textarea {
     color: white;
     text-shadow: 2px 1px rgb(148, 26, 26);
     width: 100%;
-    transition: all 0.2s;
+    transition: all 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
 }
 .task.addnew:hover{
     font-size: 10vh;
@@ -335,8 +355,9 @@ textarea {
     height:10vh;
     font-size: 6vh;
     text-shadow: 1px 2px rgb(16, 91, 86);
-    transition: all 0.2s;
+    transition: all 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
 }
+/**
 #overview:hover{
     font-size: 8vh;
 }
@@ -344,6 +365,7 @@ textarea {
     font-size: 8vh;
     text-shadow: 3px 4px rgb(16, 91, 86);
 }
+**/
 
 #stats_page{
     color: white;
@@ -355,10 +377,9 @@ textarea {
     overflow: hidden;
 }
 
-#chart_wrapper{
+#chart_wrapper, #chart_labels{
     width: 71.42vw;
     margin: auto;
-    height: 40vh;
     display: flex;
     justify-content: space-around;
 }
@@ -377,10 +398,20 @@ textarea {
 .chartbox{
     background: white;
     width: 100%;
-    transition: height 0.2s linear 0.2s;
+    transition: height 0.25s cubic-bezier(0.75, 0.02, 0.5, 1) 0.25s;
 }
 .chartbox.hide{
     height: 0% !important;
+}
+.label{
+    width: 8vmin;
+    height: 8vmin;
+    max-width: 40px;
+    max-height: 40px;
+    -webkit-border-radius:100%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.4);
 }
 
 #ranking {
@@ -388,6 +419,7 @@ textarea {
     justify-content: space-around;
     flex-direction: column;
     margin: auto;
+    margin-top: 30px;
 }
 .rank {
     display: flex;
@@ -397,25 +429,47 @@ textarea {
     width: 14.28vw;
     padding: 5px;
     box-sizing: border-box;
-    font-size: 10vw;
+    font-size: 8vw;
     font-weight: bold;
     text-shadow: 1px 2px rgb(16, 91, 86);
+    display: flex;
+    align-items: center;
 }
 .rank_body{
-    height: 10vh;
     padding: 8px;
     box-sizing: border-box;
     border-radius: 2px;
     background: white;
     color: black;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.4);
-    width: 71.42vw;
+    flex: 1;
+    display: flex;
+}
+.rank_text{
+    height: 14vw;
+    margin-left: 10px;
+}
+.rank_name {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+.rank_margin {
+    width: 14.28vw;
 }
 .rank_avatar {
     width: 14vw;
     height: 14vw;
     border-radius: 100%;
 }
+
+#ranking > .rank:nth-child(1) > .rank_no{
+    font-size: 11vw;
+}
+#ranking > .rank:nth-child(2) > .rank_no{
+    font-size: 9vw;
+}
+
+
 
 #add_new{
     display: flex;
@@ -425,12 +479,13 @@ textarea {
     width: 100vw;
     background: rgb(186, 47, 47);
     color: #ffffff;
-    -webkit-transition: margin 0.2s;
-    -moz-transition: margin 0.2s;
-    -ms-transition: margin 0.2s;
-    -o-transition: margin 0.2s;
-    transition: margin 0.2s;
+    -webkit-transition: margin 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+    -moz-transition: margin 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+    -ms-transition: margin 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+    -o-transition: margin 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+    transition: margin 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
     overflow: hidden;
+    z-index: 1;
 }
 #add_new.hide{
     margin-left: 100vw;
@@ -454,6 +509,7 @@ textarea {
     flex: 1;
     width: 71.42vw;
     margin: auto;
+    position: relative;
 }
 #add_new_form_submit{
     height: 10vh;
@@ -475,6 +531,36 @@ textarea {
 }
 #add_friends{
 
+}
+#choose_label{
+    width: 71.42vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+#choose_label > .label_wrapper{
+    height:10vmin;
+    width:10vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#choose_label > .label_wrapper > .label{
+    color: rgb(186, 47, 47);
+    text-shadow: 1px 1px rgb(148, 26, 26);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vmin;
+    font-weight: bold;
+    transition: all 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+}
+
+#choose_label > .label_wrapper > .label.active{
+    height: 9vmin;
+    width: 9vmin;
+    box-shadow: 0px 3px 20px 2px rgba(0,0,0,0.4);
 }
 /* ==========================================================================
    Helper classes
