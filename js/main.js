@@ -63,7 +63,7 @@ $(document).ready(function () {
 
     var d = new Date();
     var n = d.getDay();
-    n = (n - 1) % 7; //so it starts on monday
+    n = ((n - 1) + 7) % 7; //so it starts on monday
     console.log(n);
     $(".taskday").eq(n).addClass("active");
 
@@ -101,7 +101,13 @@ $(document).ready(function () {
     });
 
     $(document).on("click", ".labelselector", function () {
-        $(".labelselector").removeClass("active");
-        $(this).addClass("active");
-    })
+        $(".labelselector").not($(this)).removeClass("active");
+        $(this).toggleClass("active");
+    });
+
+    $(document).on("click", "#overlay, #add_friends", function (e) {
+       e.stopPropagation();
+       $("#overlay").toggleClass("active");
+    });
+
 });
