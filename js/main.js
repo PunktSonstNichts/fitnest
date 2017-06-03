@@ -10,8 +10,6 @@ $(document).ready(function () {
    });
 
    $(document).on("click", ".task-done", function () {
-       console.log("cliick");
-
         $(this).parent(".task").toggleClass("done");
         var f = $("#progressbar").width() / $("#progressbar").parent().width() * 100;
 
@@ -83,7 +81,6 @@ $(document).ready(function () {
 
     $(".task[data-day]").each(function () {
         i = parseInt($(this).attr("data-day"), 10) - 1;
-        console.log(i + " - " + n);
         if((i) < n){
             $(this).addClass("finished");
         }else if((i) == n){
@@ -100,6 +97,14 @@ $(document).ready(function () {
        $("#add_new, #stats_page").toggleClass("hide");
     });
 
+    $(document).on("click", "#add_new_form_submit", function () {
+       $(this).addClass("active");
+        setTimeout( function(){
+            $("#add_new, #stats_page").toggleClass("hide");
+            $("#add_new_form_submit").removeClass("active");
+        }, 1500);
+    });
+
     $(document).on("click", ".labelselector", function () {
         $(".labelselector").not($(this)).removeClass("active");
         $(this).toggleClass("active");
@@ -107,7 +112,7 @@ $(document).ready(function () {
 
     $(document).on("click", "#overlay, #add_friends", function (e) {
        e.stopPropagation();
-       $("#overlay").toggleClass("active");
+       $("#overlay, #add_friends_box_wrapper").toggleClass("active");
     });
 
 });

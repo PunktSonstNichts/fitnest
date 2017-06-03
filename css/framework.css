@@ -16,6 +16,9 @@
     transition-duration: 0.25s;
     transition-timing-function: cubic-bezier(0.75, 0.02, 0.5, 1);
 }
+.input_field.blank{
+    border-bottom: 1px solid rgba(186, 47, 47, 0.8);
+}
 .input_input {
     display: block;
     margin: 0;
@@ -33,6 +36,9 @@
     resize: none;
     outline: 0;
     border-radius: 0;
+}
+.input_field.blank > .input_input{
+    color: rgb(186, 47, 47);
 }
 textarea.input_input{
     height: 25vw;
@@ -58,6 +64,9 @@ textarea.input_input{
     transition-timing-function: cubic-bezier(0.75, 0.02, 0.5, 1);
     pointer-events: none;
 }
+.input_field.blank > .input_label{
+    color: rgba(186, 47, 47, 0.8);
+}
 .input_focusline {
     display: block;
     position: relative;
@@ -69,6 +78,9 @@ textarea.input_input{
     transition-property: opacity, background;
     transition-duration: 0.25s;
 }
+.input_field.blank > .input_focusline{
+    background: rgb(186, 47, 47);
+}
 .input_field.focused > .input_label{
     top: 0;
     font-size: 0.75rem;
@@ -79,7 +91,6 @@ textarea.input_input{
 button{
     height: 8vh;
     font-size: 3vh;
-    font-weight: 900;
     background: white;
     color: rgb(186, 47, 47);
     text-shadow: 1px 1px rgb(148, 26, 26);

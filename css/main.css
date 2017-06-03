@@ -316,8 +316,7 @@ textarea {
     justify-content: center;
     align-items: center;
     background: rgb(186, 47, 47);
-    font-size: 8vh;
-    font-weight: 900;
+    font-size: 12vh;
     color: white;
     text-shadow: 2px 1px rgb(148, 26, 26);
     width: 100%;
@@ -518,12 +517,97 @@ textarea {
     font-weight: 900;
     background: white;
     color: rgb(186, 47, 47);
-    text-shadow: 2px 1px rgb(148, 26, 26);
+    text-shadow: 1px 1px rgb(148, 26, 26);
     padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+}
+#add_new_form_submit > .wait, #add_new_form_submit > .text{
+    -webkit-transition: width 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+    -moz-transition: width 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+    -ms-transition: width 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+    -o-transition: width 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+    transition: width 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+    overflow: hidden;
+    text-align: center;
+    height:9.5vh;
+}
+#add_new_form_submit > .wait{
+    width: 0px;
+    overflow: hidden;
+}
+#add_new_form_submit.active > .wait{
+    width: 100%;
+}
+#add_new_form_submit.active > .text{
+    width:0px;
+}
+
+@keyframes blink {
+    /**
+     * At the start of the animation the dot
+     * has an opacity of .2
+     */
+    0% {
+        opacity: .2;
+    }
+    /**
+     * At 20% the dot is fully visible and
+     * then fades out slowly
+     */
+    20% {
+        opacity: 1;
+    }
+    /**
+     * Until it reaches an opacity of .2 and
+     * the animation can start again
+     */
+    100% {
+        opacity: .2;
+    }
+}
+
+#add_new_form_submit .wait span{
+    /**
+     * Use the blink animation, which is defined above
+     */
+    animation-name: blink;
+    /**
+     * The animation should take 1.4 seconds
+     */
+    animation-duration: 1.4s;
+    /**
+     * It will repeat itself forever
+     */
+    animation-iteration-count: infinite;
+    /**
+     * This makes sure that the starting style (opacity: .2)
+     * of the animation is applied before the animation starts.
+     * Otherwise we would see a short flash or would have
+     * to set the default styling of the dots to the same
+     * as the animation. Same applies for the ending styles.
+     */
+    animation-fill-mode: both;
+}
+
+#add_new_form_submit .wait  span:nth-child(2) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .2s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .2s;
+}
+
+#add_new_form_submit .wait  span:nth-child(3) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .4s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .4s;
 }
 
 .input_line{
@@ -550,8 +634,8 @@ textarea {
     margin-top: 15px;
 }
 #choose_label > .label_wrapper{
-    height:10vmin;
-    width:10vmin;
+    height: 10vmin;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -559,6 +643,7 @@ textarea {
 #choose_label > .label_wrapper > .label{
     color: rgb(186, 47, 47);
     text-shadow: 1px 1px rgb(148, 26, 26);
+    border: 2px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -570,24 +655,31 @@ textarea {
 #choose_label > .label_wrapper > .label.active{
     height: 9vmin;
     width: 9vmin;
-    box-shadow: 0px 3px 20px 2px rgba(0,0,0,0.4);
+    border: 4px solid white;
+    box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.3);
 }
-#overlay{
+#overlay, #add_friends_box_wrapper{
     width:0px;
     height:0px;
     overflow: hidden;
     transition: all 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
 }
-#overlay.active{
+#overlay.active, #add_friends_box_wrapper.active{
     display: flex;
-    height: 100vh;
-    width: 100vw;
     position: absolute;
-    background: rgba(0, 0, 0, 0.1);
     z-index: 2;
 }
-#add_friends_box{
+#overlay.active{
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.1);
+}
+#add_friends_box_wrapper.active {
+    height: 80vh;
+    width: 85.72vw;
     margin: 10vh 7.14vw;
+}
+#add_friends_box{
     background: white;
     flex: 1;
     border-radius: 3px;
