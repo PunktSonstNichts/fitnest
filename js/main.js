@@ -9,6 +9,8 @@ $(document).ready(function () {
       $(this).attr("data-taskcount", $("*[data-day='" + $(this).attr("data-dayid") + "']").size());
    });
 
+   var taskcount = 0;
+
    $(document).on("click", ".task-done", function () {
         $(this).parent(".task").toggleClass("done");
         var f = $("#progressbar").width() / $("#progressbar").parent().width() * 100;
@@ -17,8 +19,10 @@ $(document).ready(function () {
 
         if($(this).parent(".task").hasClass("done")){
             $("#progressbar").width((f + ((1 / total) * 100)) + '%');
+            $("#stats_done").html(++taskcount);
         }else{
             $("#progressbar").width(f - ((1 / total) * 100) + '%');
+            $("#stats_done").html( --taskcount);
         }
    });
 
@@ -47,14 +51,16 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function() {
-        var hT = $('#chart_wrapper').offset().top,
-            hH = $('#chart_wrapper').outerHeight(),
+        var hT_c = $('#chart_wrapper').offset().top,
+            hH_c = $('#chart_wrapper').outerHeight(),
             wH = $(window).height(),
             wS = $(this).scrollTop();
-        if (wS > (hT+hH-wH)){
-            $(".chartbox").removeClass("hide");
+        //cheaty to link #ranking on the chartbox,
+        // but no time to make it beautiful
+        if (wS > (hT_c+hH_c-wH)){
+            $(".chartbox, .rank, #blur").removeClass("hide");
         }else{
-            $(".chartbox").addClass("hide");
+            $(".chartbox, .rank, #blur").addClass("hide");
         }
     });
 
@@ -108,9 +114,11 @@ $(document).ready(function () {
     $(document).on("click", ".labelselector", function () {
         $(".labelselector").not($(this)).removeClass("active");
         $(this).toggleClass("active");
+    }).on("click", ".add_friends_res_item", function () {
+        $(this).toggleClass("active");
     });
 
-    $(document).on("click", "#overlay, #add_friends", function (e) {
+    $(document).on("click", "#overlay, #add_friends, #safenewfriends", function (e) {
        e.stopPropagation();
        $("#overlay, #add_friends_box_wrapper").toggleClass("active");
     });

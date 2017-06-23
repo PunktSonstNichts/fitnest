@@ -370,7 +370,7 @@ textarea {
 #stats_page{
     color: white;
     background: rgb(29, 114, 108);
-    height: 90vh;
+    min-height: 90vh;
 }
 #stats_page.hide{
     height: 0px;
@@ -413,17 +413,48 @@ textarea {
     border-radius:100%;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.4);
 }
-
+#stats_user {
+    width: 71.42vw;
+    margin: 15px auto;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background: white;
+    color: black;
+    box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#stats_done {
+    font-size: 42px;
+    font-weight: bold;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    background: rgb(29, 114, 108);
+    color: white;
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 3px 2px rgba(0,0,0,0.4);
+    text-shadow: 0px 0px 3px rgb(46, 131, 125);
+}
+#stats_explain {
+    color: rgb(85,85,85);
+}
+#stats_sub{
+text-align: center;
+margin-top: 5px;
+}
 #ranking {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    margin: auto;
-    margin-top: 30px;
+    padding-bottom: 10px;
 }
 .rank {
     display: flex;
     margin: 10px 0;
+    transition: margin 0.25s cubic-bezier(0.75, 0.02, 0.5, 1) 0.5s;
 }
 .rank_no{
     width: 14.28vw;
@@ -448,10 +479,16 @@ textarea {
 .rank_text{
     height: 14vw;
     margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .rank_name {
     font-weight: bold;
     font-size: 1.4em;
+}
+.rank_stats{
+    color: rgb(55,55,55);
 }
 .rank_margin {
     width: 14.28vw;
@@ -468,7 +505,24 @@ textarea {
 #ranking > .rank:nth-child(2) > .rank_no{
     font-size: 9vw;
 }
-
+#blur{
+    position: fixed;
+    bottom: 0px;
+    height: 25px;
+    width: 100vw;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 10%, rgb(29, 114, 108) 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 10%,rgb(29, 114, 108) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%,rgb(29, 114, 108) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08212121', endColorstr='#cc000000',GradientType=0 );
+    -webkit-transition: height 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+    -moz-transition: height 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+    -ms-transition: height 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+    -o-transition: height 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+    transition: height 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+}
+#blur.hide{
+    height:0px;
+}
 
 
 #add_new{
@@ -513,7 +567,7 @@ textarea {
 }
 #add_new_form_submit{
     height: 10vh;
-    font-size: 6.5vh;
+    font-size: 6vh;
     font-weight: 900;
     background: white;
     color: rgb(186, 47, 47);
@@ -532,11 +586,14 @@ textarea {
     transition: width 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
     overflow: hidden;
     text-align: center;
-    height:9.5vh;
+    height:9vh;
 }
 #add_new_form_submit > .wait{
     width: 0px;
     overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 #add_new_form_submit.active > .wait{
     width: 100%;
@@ -570,46 +627,32 @@ textarea {
 }
 
 #add_new_form_submit .wait span{
-    /**
-     * Use the blink animation, which is defined above
-     */
     animation-name: blink;
-    /**
-     * The animation should take 1.4 seconds
-     */
-    animation-duration: 1.4s;
-    /**
-     * It will repeat itself forever
-     */
+    animation-duration: 1.6s;
     animation-iteration-count: infinite;
-    /**
-     * This makes sure that the starting style (opacity: .2)
-     * of the animation is applied before the animation starts.
-     * Otherwise we would see a short flash or would have
-     * to set the default styling of the dots to the same
-     * as the animation. Same applies for the ending styles.
-     */
     animation-fill-mode: both;
+    margin-bottom: 3vh;
 }
 
 #add_new_form_submit .wait  span:nth-child(2) {
-    /**
-     * Starts the animation of the third dot
-     * with a delay of .2s, otherwise all dots
-     * would animate at the same time
-     */
     animation-delay: .2s;
 }
 
 #add_new_form_submit .wait  span:nth-child(3) {
-    /**
-     * Starts the animation of the third dot
-     * with a delay of .4s, otherwise all dots
-     * would animate at the same time
-     */
     animation-delay: .4s;
 }
-
+#add_new_form_submit .wait  span:nth-child(4) {
+     animation-delay: .6s;
+ }
+#add_new_form_submit .wait  span:nth-child(5) {
+    animation-delay: .8s;
+}
+#add_new_form_submit .wait  span:nth-child(6) {
+    animation-delay: 1.0s;
+}
+#add_new_form_submit .wait  span:nth-child(7) {
+    animation-delay: 1.2s;
+}
 .input_line{
     display: flex;
     align-items: center;
@@ -653,8 +696,8 @@ textarea {
 }
 
 #choose_label > .label_wrapper > .label.active{
-    height: 9vmin;
-    width: 9vmin;
+    height: 9.6vmin;
+    width: 9.6vmin;
     border: 4px solid white;
     box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.3);
 }
@@ -685,6 +728,32 @@ textarea {
     border-radius: 3px;
     border: 1px solid rgb(186, 47, 47);
     box-shadow: 2px 3px 15px 5px rgba(0, 0, 0, 0.32);
+    display: flex;
+    flex-direction: column;
+}
+#add_friends_res_box {
+    flex: 1;
+}
+.add_friends_res_item {
+    color: rgb(186, 47, 47);
+    text-shadow: 1px 1px 0px rgb(148, 26, 26);
+    font-size: 10vmin;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid rgba(33,33,33,0.33);
+    border-radius: 2px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.4);
+    transition: all 0.25s cubic-bezier(0.75, 0.02, 0.5, 1);
+}
+.add_friends_res_item.active{
+    background: rgb(248, 111, 111);
+    color: white;
+}
+img.add_friends_res_icon {
+    width: 14vw;
+    height: 14vw;
+    border-radius: 100%;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.4);
 }
 /* ==========================================================================
    Helper classes

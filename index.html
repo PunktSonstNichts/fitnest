@@ -24,14 +24,30 @@
             <div id="overlay"></div>
             <div id="add_friends_box_wrapper">
                 <div id="add_friends_box">
-                    <div class="input_wrapper" style="margin: 0 5px;">
-                        <div class="input_field blank">
-                            <input class="input_input" type="text" id="search" name="search" value="">
-                            <label class="input_label" for="search">Freunde suchen</label>
-                            <span class="input_focusline"></span>
+                    <div style="margin: 0 5px;">
+                        <div class="input_wrapper">
+                            <div class="input_field blank">
+                                <input class="input_input" type="text" id="search" name="search" value="">
+                                <label class="input_label" for="search">Freunde suchen</label>
+                                <span class="input_focusline"></span>
+                            </div>
                         </div>
                     </div>
-
+                    <div id="add_friends_res_box">
+                        <div class="add_friends_res_item">
+                            <img src="img/till.png" class="add_friends_res_icon"/>
+                            <span>Malte</span>
+                        </div>
+                        <div class="add_friends_res_item">
+                            <img src="img/jan.png" class="add_friends_res_icon"/>
+                            <span>Till</span>
+                        </div>
+                        <div class="add_friends_res_item">
+                            <img src="img/max.png" class="add_friends_res_icon"/>
+                            <span>Max</span>
+                        </div>
+                    </div>
+                    <button id="safenewfriends">Speichern</button>
                 </div>
             </div>
 
@@ -95,7 +111,7 @@
             </div>
             <div id="add_new_form_submit">
                 <span class="text">Übung anlegen</span>
-                <span class="wait"><span>.</span><span>.</span><span>.</span></span>
+                <span class="wait"><span>.</span><span>.</span><span>.</span><span>.</span><span>.</span><span>.</span><span>.</span></span>
             </div>
         </div>
         <div id="wrapper">
@@ -319,7 +335,7 @@
             </div>
         </div>
 
-        <div id="overview" href="#stats_page">
+        <div id="overview" href="#overview">
             <span>Auswertung</span>
         </div>
         </div>
@@ -340,15 +356,17 @@
                 <div class="label five"></div>
             </div>
             <div id="stats_user">
-
+                <div id="stats_done" data-target="taskcounter">0</div>
+                <span id="stats_explain">Tasks erledigt heute</span>
+                <div id="stats_sub">Damit liegst du über dem Durchschnitt und bist auf Platz&nbsp;2.</div>
             </div>
             <div id="ranking">
                 <div class="rank">
                     <div class="rank_no">1.</div>
                     <div class="rank_body">
-                        <img src="https://scontent.cdninstagram.com/t51.2885-15/s750x750/sh0.08/e35/18013934_434618500225390_7526245181905960960_n.jpg" class="rank_avatar">
+                        <img src="img/max.png" class="rank_avatar">
                         <div class="rank_text">
-                            <div class="rank_name">Till</div>
+                            <div class="rank_name">Maximilian</div>
                             <div class="rank_stats"><span>4</span> von <span>10</span> erledigt</div>
                         </div>
                     </div>
@@ -357,15 +375,27 @@
                 <div class="rank">
                     <div class="rank_no">2.</div>
                     <div class="rank_body">
-                        <img src="https://scontent.cdninstagram.com/t51.2885-15/s1080x1080/e15/fr/18013963_1837900793197743_101307523914530816_n.jpg" class="rank_avatar">
+                        <img src="img/till.png" class="rank_avatar">
                         <div class="rank_text">
-                            <div class="rank_name">Max Mustermann</div>
-                            <div class="rank_stats"><span>3</span> von <span>6</span></div>
+                            <div class="rank_name">Till</div>
+                            <div class="rank_stats"><span>3</span> von <span>6</span> erledigt</div>
+                        </div>
+                    </div>
+                    <div class="rank_margin"></div>
+                </div>
+                <div class="rank">
+                    <div class="rank_no">3.</div>
+                    <div class="rank_body">
+                        <img src="img/jan.png" class="rank_avatar">
+                        <div class="rank_text">
+                            <div class="rank_name">Jan </div>
+                            <div class="rank_stats"><span>2</span> von <span>7</span> erledigt</div>
                         </div>
                     </div>
                     <div class="rank_margin"></div>
                 </div>
             </div>
+            <div id="blur"></div>
         </div>
 
 
